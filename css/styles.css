@@ -43,3 +43,11 @@ html, body { height:100%;}
 	top:10px;
 	right:22px;
 }
+
+.text-centered{
+	text-align: center;
+}
+
+.care-container {
+	background-color: #3b83c0!important;
+}

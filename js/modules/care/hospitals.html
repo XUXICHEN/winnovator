@@ -1,19 +1,23 @@
-<div class="ui two cards allheight">
-	<div ng-repeat="(key, value) in model" class="ui card column">
-	  <a class="image" href="#">
-	    <img src="/img/emp-image.png">
-	  </a>
-	  <div class="content">
-	    <a class="header" href="#">{{value.name}}</a>
-	    <div class="meta">
-	        <span>{{ 'CARE_DISTANCE' | translate }} : {{value.distance}}</span>
-	    </div>
-	    <div class="description">
-	        <p>{{value.desc}}</p>
-	    </div>
-	    <div class="extra">
-	        {{value.location}}
-	    </div>
-	  </div>
+<div class="sixteen wide column allheight">
+	<div class="ui cards">
+		<div ng-repeat="(key, value) in model" class="card fullwidth">
+			<div class="">
+			    <div class="content">
+			      <div class="image text-centered">
+			      	<img class="ui small image centered fluid" src="/img/emp-image.png" />
+			      </div>
+			      <a class="header">{{value.name}}</a>
+			      <div class="meta">
+			        <span>{{ 'CARE_DISTANCE' | translate }} : {{value.distance}}</span>
+			      </div>
+			      <div class="description">
+			        <p>{{value.desc}}</p>
+			      </div>
+			      <div class="extra">
+			        {{value.location}}
+			      </div>
+			    </div>
+			</div>
+		</div>
 	</div>
 </div>
