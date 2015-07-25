@@ -12,8 +12,30 @@ html, body { height:100%;}
 .ui.button {
 	vertical-align: middle !important;
 }
+
 .ui.card .header{
 	font-weight: bold;
 	font-size: 2em !important;
 	color: black;	
+}
+
+.ten_height{
+	
+	height: 10%;
+    background-color: #e0e0e0;
+}
+
+.mini{
+
+	width:70px !important;
+}
+
+.fullwidth{
+	width:100% !important;
+}
+
+.image.absolute{
+	position:absolute;
+	top:10px;
+	right:22px;
 }
