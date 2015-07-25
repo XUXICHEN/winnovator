@@ -1,4 +1,4 @@
-var app = angular.module('Sprot', ['ngSanitize', 'ngRoute'], function($routeProvider){
+var app = angular.module('Sprot', ['ngSanitize', 'ngRoute', 'pascalprecht.translate'], function($routeProvider){
 		$routeProvider.when('/', {
 			templateUrl : '/js/modules/main/index.html'
 		}).when('/care', {
@@ -29,11 +29,22 @@ app.run(function($rootScope) {
    .constant('SETTINGS', {
 	   	title : 'Sprot'
    })
-   .service('router', function($scope){
-   		this.change = function(url){
+   .service('t', function(){
+   		this._ = function(text){
    			
    		};
    });
+
+app.config(['$translateProvider', function ($translateProvider) {
+	$translateProvider.translations('en', {
+		TITLE          : 'Sprot',
+		MENU_LIFE_CARE : 'Life Care',
+		MENU_VOCAL_MSG : 'Vocal Message',
+		MENU_CONTACTS  : 'Contacts',
+		MENU_REVEAL    : 'Reveal'
+	});
+	$translateProvider.preferredLanguage('en');
+}]);
 
 app.controller('MainCtrl', 
 	function($rootScope, $scope, $http, $interval, SETTINGS, INFO){//MainCtr body

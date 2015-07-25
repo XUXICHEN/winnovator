@@ -1,0 +1,14 @@
+html, body { height:100%;}
+
+.allheight {
+	height: 100%;
+}
+
+.halfheight {
+    height: 50%;
+    background-color: #e0e0e0;
+}
+
+.ui.button {
+	vertical-align: middle !important;
+}

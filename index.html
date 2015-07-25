@@ -3,6 +3,9 @@
 
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>{{SETTINGS.title}}</title>
     <link rel="stylesheet" href="/css/semantic.min.css" />
     <link rel="stylesheet" href="/css/styles.css" />
@@ -14,6 +17,7 @@
     <script src="/js/cores/angular.min.js"></script>
     <script src="/js/cores/angular-ui-router.min.js"></script>
     <script src="/js/cores/angular-sanitize.min.js"></script>
+    <script src="/js/cores/angular-translate.min.js"></script>
 
     <script src="/js/lib/utils.js"></script>
     <script src="/js/lib/bootstrap.js"></script>
@@ -28,7 +32,7 @@
 
   <body>
     
-    <div class="container" ng-view></div>
+    <div class="container allheight" ng-view></div>
 
     <!-- SET BASE URL -->
     <script>document.write('<base href="' + document.location + '" />');</script>
