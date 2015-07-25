@@ -13,10 +13,13 @@ var app = angular.module('Sprot', ['ngSanitize', 'ngRoute', 'pascalprecht.transl
         }).when('/remind', {
             templateUrl : '/js/modules/voca/remind.html',
             controller : 'VocaCtrl'
+        }).when('/sent', {
+            templateUrl : '/js/modules/voca/sent.html',
+            controller : 'VocaCtrl'
         }).when('/voca', {
-			templateUrl : '/js/modules/voca/index.html',
-			controller : 'VocaCtrl'
-		}).when('/cont/more', {
+            templateUrl : '/js/modules/voca/index.html',
+            controller : 'VocaCtrl'
+        }).when('/cont/more', {
 			templateUrl : '/js/modules/cont/more.html',
 			controller : 'ContCtrl'
 		}).when('/cont', {
@@ -60,6 +63,7 @@ app.config(['$translateProvider', function ($translateProvider) {
         VOCA_SHARE     : 'SHARE',
         VOCA_REMIND    : 'REMIND',
         VOCA_RECORD    : 'RECORD',
+<<<<<<< Updated upstream
         CONT_CONTACTS_LIST     : 'Contacts List',
         CONT_MY_SON    : 'My Son',
         CONT_SET_DEFAULT     : 'Set Default',
@@ -67,6 +71,9 @@ app.config(['$translateProvider', function ($translateProvider) {
         REVE_PLAY	:'Play',
         REVE_RECORD	: 'Record',
         REVE_SET_UNLOCKER: 'Set Unlocker',
+=======
+        VOCA_SENT      : 'VOICE MEMO SENT'
+>>>>>>> Stashed changes
 
 	});
 	$translateProvider.preferredLanguage('en');
