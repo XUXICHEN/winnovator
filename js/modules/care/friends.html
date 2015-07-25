@@ -1,0 +1,21 @@
+<div class="sixteen wide column allheight">
+	<div ng-repeat="(key, value) in model" class="ui items">
+		<div class="item">
+		    <div class="image">
+		      <img src="/images/wireframe/image.png">
+		    </div>
+		    <div class="content">
+		      <a class="header">{{value.name}}</a>
+		      <div class="meta">
+		        <span>{{ 'CARE_DISTANCE' | translte }} : {{value.distance}}</span>
+		      </div>
+		      <div class="description">
+		        <p>{{value.desc}}</p>
+		      </div>
+		      <div class="extra">
+		        {{value.location}}
+		      </div>
+		    </div>
+		</div>
+	</div>
+</div>

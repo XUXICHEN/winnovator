@@ -1,0 +1,19 @@
+<div class="ui two cards allheight">
+	<div ng-repeat="(key, value) in model" class="ui card column">
+	  <a class="image" href="#">
+	    <img src="/img/emp-image.png">
+	  </a>
+	  <div class="content">
+	    <a class="header" href="#">{{value.name}}</a>
+	    <div class="meta">
+	        <span>{{ 'CARE_DISTANCE' | translate }} : {{value.distance}}</span>
+	    </div>
+	    <div class="description">
+	        <p>{{value.desc}}</p>
+	    </div>
+	    <div class="extra">
+	        {{value.location}}
+	    </div>
+	  </div>
+	</div>
+</div>

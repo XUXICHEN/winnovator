@@ -1,10 +1,12 @@
-<div class="ui celled grid allheight">
+<div class="main-ctn ui celled grid allheight ng-class: show_main;">
 	<div class="row halfheight">
-		<div class="eight wide column ui button yellow" >{{ 'CARE_FRIENDS_AROUND' | translate }}</div>
-		<div class="eight wide column ui button green"  >{{ 'CARE_FACILITIES'     | translate }}</div>
+		<div class="eight wide column ui button yellow" ng-click="show('friends')"    >{{ 'CARE_FRIENDS_AROUND' | translate }}</div>
+		<div class="eight wide column ui button green"  ng-click="show('facilities')" >{{ 'CARE_FACILITIES'     | translate }}</div>
 	</div>
 	<div class="row halfheight">
-		<div class="eight wide column ui button blue" >{{ 'CARE_PARKS'     | translate }}</div>
-		<div class="eight wide column ui button teal" >{{ 'CARE_HOSPITALS' | translate }}</div>
+		<div class="eight wide column ui button blue" ng-click="show('parks')"    >{{ 'CARE_PARKS'     | translate }}</div>
+		<div class="eight wide column ui button teal" ng-click="show('hospitals')">{{ 'CARE_HOSPITALS' | translate }}</div>
 	</div>
 </div>
+
+<div id="SubCtn" class="ui celled grid allheight action-ctn ng-class:show_sub;" ng-include="show_template" onload="onviewload(view_cmd)"></div>
