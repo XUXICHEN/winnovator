@@ -4,9 +4,9 @@ var app = angular.module('Sprot', ['ngSanitize', 'ngRoute', 'pascalprecht.transl
 		}).when('/care', {
 			templateUrl : '/js/modules/care/index.html',
 			controller : 'CareCtrl'
-		}).when('/hosp', {
-			templateUrl : '/js/modules/hosp/index.html',
-			controller : 'HospCtrl'
+		}).when('/voca', {
+			templateUrl : '/js/modules/voca/index.html',
+			controller : 'VocaCtrl'
 		}).when('/cont', {
 			templateUrl : '/js/modules/cont/index.html',
 			controller : 'ContCtrl'
@@ -28,11 +28,6 @@ app.run(function($rootScope) {
    })
    .constant('SETTINGS', {
 	   	title : 'Sprot'
-   })
-   .service('t', function(){
-   		this._ = function(text){
-   			
-   		};
    });
 
 app.config(['$translateProvider', function ($translateProvider) {
@@ -41,18 +36,25 @@ app.config(['$translateProvider', function ($translateProvider) {
 		MENU_LIFE_CARE : 'Life Care',
 		MENU_VOCAL_MSG : 'Vocal Message',
 		MENU_CONTACTS  : 'Contacts',
-		MENU_REVEAL    : 'Reveal'
+		MENU_REVEAL    : 'Reveal',
+		CARE_FRIENDS_AROUND : 'Friends Around',
+		CARE_FACILITIES     : 'Caring Houses',
+		CARE_PARKS          : 'Parks',
+		CARE_HOSPITALS      : 'Hospitals',
 	});
 	$translateProvider.preferredLanguage('en');
 }]);
 
 app.controller('MainCtrl', 
-	function($rootScope, $scope, $http, $interval, SETTINGS, INFO){//MainCtr body
+	function($rootScope, $scope, $http, $interval, $location, SETTINGS, INFO){//MainCtr body
 
 		console.info('App started @ ' + $rootScope.startTimestamp);
 		console.info('App Info: ', INFO);
 
 		$scope.SETTINGS = SETTINGS;
+		$scope.goto = function(path){
+			$location.url(path)
+		};
 
 	}//eo MainCtrl body
 );//eo MainCtrl
