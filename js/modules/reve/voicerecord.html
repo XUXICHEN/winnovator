@@ -1,0 +1,28 @@
+<div class="sixteen wide column allheight ui cards">
+	<div class="fullwidth card" ng-repeat="(key, value) in model">
+		<div class="content">
+		      <div class="header">
+			      {{value.date}}
+			      {{ 'REVE_LOG_TIME' | translate }}
+			  </div>
+			  <div class="description">
+			      {{ value.duration }}
+			      {{ 'REVE_LOG_SEC' | translate }}
+			  </div>
+			  <div class="description">
+			      <i class="fa fa-clock-o green" ng-if="value.timer"></i>
+			      <i class="fa fa-remove red" ng-if="!value.timer"></i>
+			      {{ 'REVE_CLOCK' | translate }}
+			  </div>
+			  <div class="description">
+			      <i class="fa fa-bed"></i>
+			      <span ng-if="value.timer"> {{value.timertime}} </span>
+			      <span ng-if="!value.timer"> -- . --</span>
+			      {{ 'REVE_CLOCK_TIME' | translate }}
+			  </div>
+			  <div class="extra content">
+			  	<div class="ui red button" ng-click="remove_item(view_cmd, key)"> <i class="fa fa-remove"></i> {{ 'REVE_REMOVE' | translate }}</div>
+			  </div>
+		</div>
+	</div>
+</div>

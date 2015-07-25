@@ -1,1 +1,13 @@
-<h1 class="ui card">Reve</h1>
+<div class="main-ctn ui celled grid allheight ng-class: show_main;">
+	<div class="row onethirdheight">
+		<div class="fullwidth column ui button yellow" ng-click="goto('voca')" > {{ 'REVE_RECORDING' | translate }}</div>
+	</div>
+	<div class="row onethirdheight">
+		<div class="fullwidth column ui button green"   ng-click="show('voicerecord')" > {{ 'REVE_VOCLOG'    | translate }}</div>
+	</div>
+	<div class="row onethirdheight">
+		<div class="fullwidth column ui button blue"   ng-click="show('voicerecord')" > {{ 'REVE_UNLOCK'    | translate }}</div>
+	</div>
+</div>
+
+<div id="SubCtn" class="ui celled grid allheight action-ctn ng-class:show_sub; care-container" ng-include="show_template" onload="onviewload(view_cmd)"></div>

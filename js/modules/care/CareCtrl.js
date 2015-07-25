@@ -142,6 +142,10 @@ app.controller('CareCtrl', function($rootScope, $scope, $http, $interval, SETTIN
 	$scope.onviewload = function(cmd){
 		console.info('view loaded...', cmd);
 
+		if(typeof mocks[cmd] === 'undefined'){
+			return;
+		}
+
 		jQuery.each(mocks[cmd], function(idx, value){
 			value.distance = Math.round10( ( Math.random() * 10 ) + value.distance, -1 );
 		});

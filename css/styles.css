@@ -13,6 +13,10 @@ html, body { height:100%;}
     background-color: #e0e0e0;
 }
 
+.onethirdheight {
+	height: 33.333333332%;
+}
+
 .ui.button {
 	vertical-align: middle !important;
 }
@@ -51,4 +55,13 @@ html, body { height:100%;}
 
 .care-container {
 	background-color: #3b83c0!important;
+}
+
+.ui.statistic{
+	font-size: 2em !important;
+	margin-left: 2em !important;
+}
+
+.ui.statistic>.value, .ui.statistics .statistic>.value {
+	font-size: 2rem !important;
 }
