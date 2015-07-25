@@ -1,7 +1,10 @@
-<div margin="0 auto 0 auto">
-<h1 class="ui card">To do</h1>
-<button class="fluid ui yellow button" ng-click="goto('share')">{{ 'VOCA_SHARE' | translate }}</button>
-<br/>
-<button class="fluid ui teal button" ng-click="goto('remind')">{{ 'VOCA_REMIND' | translate }}</button>
-</div>
+<div class="ui celled grid allheight">
 
+    <div class="row halfheight">
+        <div ng-click="goto('share')" class="sixteen wide column ui button yellow"><h1>{{ 'VOCA_SHARE' | translate }}</h1></div>
+    </div>
+    <div class="row halfheight">
+        <div ng-click="goto('remind')" class="sixteen wide column ui button teal"><h1>{{ 'VOCA_REMIND' | translate }}</h1></div>
+    </div>
+
+</div>

@@ -55,7 +55,8 @@ app.config(['$translateProvider', function ($translateProvider) {
 		CARE_HOSPITALS      : 'Hospitals',
 		CARE_DISTANCE		: 'Distance',
         VOCA_SHARE     : 'SHARE',
-        VOCA_REMIND    : 'REMIND'
+        VOCA_REMIND    : 'REMIND',
+        VOCA_RECORD    : 'RECORD'
 
 	});
 	$translateProvider.preferredLanguage('en');

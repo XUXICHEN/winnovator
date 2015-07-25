@@ -32,6 +32,7 @@ html, body { height:100%;}
 .mini{
 
 	width:70px !important;
+	border-radius: 35px;
 }
 
 .fullwidth{
