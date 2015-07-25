@@ -4,7 +4,16 @@ var app = angular.module('Sprot', ['ngSanitize', 'ngRoute', 'pascalprecht.transl
 		}).when('/care', {
 			templateUrl : '/js/modules/care/index.html',
 			controller : 'CareCtrl'
-		}).when('/voca', {
+		}).when('/options', {
+            templateUrl : '/js/modules/voca/options.html',
+            controller : 'VocaCtrl'
+        }).when('/share', {
+            templateUrl : '/js/modules/voca/share.html',
+            controller : 'VocaCtrl'
+        }).when('/remind', {
+            templateUrl : '/js/modules/voca/remind.html',
+            controller : 'VocaCtrl'
+        }).when('/voca', {
 			templateUrl : '/js/modules/voca/index.html',
 			controller : 'VocaCtrl'
 		}).when('/cont', {
@@ -41,6 +50,9 @@ app.config(['$translateProvider', function ($translateProvider) {
 		CARE_FACILITIES     : 'Caring Houses',
 		CARE_PARKS          : 'Parks',
 		CARE_HOSPITALS      : 'Hospitals',
+        VOCA_SHARE     : 'SHARE',
+        VOCA_REMIND    : 'REMIND'
+
 	});
 	$translateProvider.preferredLanguage('en');
 }]);

@@ -1,3 +1,4 @@
-app.controller('VocaCtrl', function($rootScope, $scope, $http, $interval, SETTINGS, INFO){
+app.controller('VocaCtrl', function($rootScope, $scope,$http, $interval, SETTINGS, INFO){
 	console.info('VocaCtrl started @ ' + $rootScope.startTimestamp);
+    $scope.cool="ha";
 });
