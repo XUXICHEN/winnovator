@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html ng-app="{namespace}">
+<html ng-app="Sprot" ng-controller="MainCtrl">
 
   <head>
     <meta charset="utf-8" />
-    <title>{title}</title>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.2/semantic.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <title>{{SETTINGS.title}}</title>
+    <link rel="stylesheet" href="/css/semantic.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.2/semantic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-sanitize.min.js"></script>
+    <script src="/js/cores/jquery.min.js"></script>
+    <script src="/js/cores/moment.min.js"></script>
+    <script src="/js/cores/underscore-min.js"></script>
+    <script src="/js/cores/semantic.min.js"></script>
+    <script src="/js/cores/angular.min.js"></script>
+    <script src="/js/cores/angular-ui-router.min.js"></script>
+    <script src="/js/cores/angular-sanitize.min.js"></script>
+
+    <script src="/js/lib/utils.js"></script>
+    <script src="/js/lib/bootstrap.js"></script>
+
+    <!-- Controllers -->
+    <script src="/js/modules/care/CareCtrl.js"></script>
+    <script src="/js/modules/cont/ContCtrl.js"></script>
+    <script src="/js/modules/hosp/HospCtrl.js"></script>
+    <script src="/js/modules/reve/ReveCtrl.js"></script>
 
   </head>
 
-  <body ng-controller="MainCtrl">
-    <top-menu commander="commander" config="config"></top-menu>
-    <div class="container" ng-include="stage"></div>
+  <body>
+    
+    <div class="container" ng-view></div>
+
+    <!-- SET BASE URL -->
     <script>document.write('<base href="' + document.location + '" />');</script>
   </body>
 
