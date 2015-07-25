@@ -54,6 +54,9 @@ app.config(['$translateProvider', function ($translateProvider) {
 		CARE_PARKS          : 'Parks',
 		CARE_HOSPITALS      : 'Hospitals',
 		CARE_DISTANCE		: 'Distance',
+		CARE_FRIENDS_GOTO   : 'Goto',
+		CARE_FRIENDS_CALL   : 'Call',
+		CARE_FRIENDS_CALLVM : 'Vocal Msg',
         VOCA_SHARE     : 'SHARE',
         VOCA_REMIND    : 'REMIND',
         VOCA_RECORD    : 'RECORD'

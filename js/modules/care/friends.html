@@ -1,29 +1,27 @@
 <div class="sixteen wide column allheight">
 	<div class="ui cards">
 		<div ng-repeat="(key, value) in model" class="card fullwidth">
-			<div class="">
-			    <div class="content">
-			      <div class="image text-centered">
-			      	<img class="ui small image centered fluid" src="/img/emp-image.png" />
-			      </div>
-			      <a class="header">{{value.name}}</a>
-			      <div class="meta">
-			        <span>{{ 'CARE_DISTANCE' | translate }} : {{value.distance}}</span>
-			      </div>
-			      <div class="description">
-			        <p>{{value.desc}}</p>
-			      </div>
-			      <div class="extra">
-			        {{value.location}}
-			      </div>
-			      <div class="extra content">
-			      	  <div class="ui two buttons">
-			            <div class="ui basic blue button">Goto</div>
-			            <div class="ui basic green button">Call</div>
-			          </div>
-			      </div>
-			    </div>
-			</div>
+			<div class="image text-centered">
+	      		<img class="ui small image centered fluid" src="{{value.icon}}" />
+	        </div>
+		    <div class="content">
+		      <a class="header">{{value.name}}</a>
+		      <div class="meta">
+		        <span>{{ 'CARE_DISTANCE' | translate }} : {{value.distance}} KM</span>
+		      </div>
+		      <div class="description" ng-if="value.desc">
+		        <p class="ui label green">{{value.desc}}</p>
+		      </div>
+		      <div class="extra">
+		        {{value.location}}
+		      </div>
+		      <div class="extra content">
+		      	  <div class="ui two buttons">
+		            <div class="ui blue button">  <i class="fa fa-volume-up"></i> {{ 'CARE_FRIENDS_CALLVM' | translate }}</div>
+		            <div class="ui green button"> <i class="fa fa-phone "></i> {{ 'CARE_FRIENDS_CALL' | translate }}</div>
+		          </div>
+		      </div>
+		    </div>
 		</div>
 	</div>
 </div>

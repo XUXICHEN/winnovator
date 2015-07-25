@@ -77,51 +77,51 @@ app.controller('CareCtrl', function($rootScope, $scope, $http, $interval, SETTIN
 
 	var mocks = {
 		friends : [
-			{ name : 'Chan Ying Feng', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Joyce Chang', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Chan Ying Feng', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Wen Li Quan', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Andy Vu', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Coco Tsai', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Melissa Tian', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Tang Xin Yi', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Ashley Ng', distance: 5.0, location:'', icon:'', desc:'' }
-		],
-		facilities : [
-			{ name : 'AgeWell Artsz', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Assist Care', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Handicaps Welfare Association (Whampoa)', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Lotus Eldercare Pte Ltd', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'MW Medical Pte Ltd', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'OmniMed Healthcare Holdings', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Preciouz Kare Pte Ltd', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'St Andrew\'s Community Hospital', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Yong-En Care Centre', distance: 5.0, location:'', icon:'', desc:'' },
-		],
-		parks : [
-			{ name : 'Dhoby Ghaut Green', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Gardens by the Bay', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Pearl\'s Hill City Park', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Tiong Bahru Park', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Clementi Woods Park ', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Jurong Central Park ', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Jurong Central Park ', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Toa Payoh Town Park', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Woodlands Town Garden', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Pasir Ris Park', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Mount Faber Park', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'The Southern Ridges', distance: 5.0, location:'', icon:'', desc:'' },
+			{ name : 'Chan Ying Feng', distance: 5.0, location:'80 Boat Quay', icon:'/img/avatar/YF.jpg', desc:'Daughter' },
+			{ name : 'Joyce Chang',    distance: 5.0, location:'40 Hong Kong Street', icon:'/img/avatar/Joy.jpg', desc:'' },
+			{ name : 'Chua Aik Boon',  distance: 5.0, location:'36 North Canal Road', icon:'/img/avatar/boss.jpg', desc:'Son' },
+			{ name : 'Aitch Chung',    distance: 5.0, location:'383 Jalan Besar', icon:'/img/avatar/aitch.jpg', desc:'' },
+			{ name : 'Andy Vu',        distance: 5.0, location:'115 King George’s Avenue', icon:'/img/avatar/Andy.jpg', desc:'' },
+			{ name : 'Coco Tsai',      distance: 5.0, location:'3 Seng Poh Road', icon:'/img/avatar/coco.jpg', desc:'' },
+			{ name : 'Melissa Tian',   distance: 5.0, location:'6 Kim Tian Road ', icon:'/img/avatar/Mel.jpg', desc:'' },
+			{ name : 'Tang Xin Yi',    distance: 5.0, location:'36 Keong Saik Road', icon:'/img/avatar/XY.jpg', desc:'' },
+			{ name : 'Ashley Ng',      distance: 5.0, location:'28 Maxwell Road', icon:'/img/avatar/Ash.jpg', desc:'' }
 		],
 		hospitals : [
-			{ name : 'National Heart Centre', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'National Neuroscience Institute', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Singapore National Eye Centre', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Raffles Hospital', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Ren Ci Hospital and Medicare Centre', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'National University Hospital', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Tan Tock Seng Hospital', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'KK Women\'s and Children\'s Hospital', distance: 5.0, location:'', icon:'', desc:'' },
-			{ name : 'Saint Andrew\'s Community Hospital', distance: 5.0, location:'', icon:'', desc:'' }
+			{ name : 'AgeWell Artsz', 							distance: 5.0, location:'', icon:'/img/hospitals/image1.jpg', desc:'' },
+			{ name : 'Assist Care', 							distance: 5.0, location:'', icon:'/img/hospitals/image2.jpg', desc:'' },
+			{ name : 'Handicaps Welfare Association (Whampoa)', distance: 5.0, location:'', icon:'/img/hospitals/image3.jpg', desc:'' },
+			{ name : 'Lotus Eldercare Pte Ltd', 				distance: 5.0, location:'', icon:'/img/hospitals/image4.jpg', desc:'private' },
+			{ name : 'MW Medical Pte Ltd', 						distance: 5.0, location:'', icon:'/img/hospitals/image5.jpg', desc:'' },
+			{ name : 'OmniMed Healthcare Holdings', 			distance: 5.0, location:'', icon:'/img/hospitals/image6.jpg', desc:'' },
+			{ name : 'Preciouz Kare Pte Ltd', 					distance: 5.0, location:'', icon:'/img/hospitals/image7.jpg', desc:'private' },
+			{ name : 'St Andrew\'s Community Hospital', 		distance: 5.0, location:'', icon:'/img/hospitals/image8.jpg', desc:'' },
+			{ name : 'Yong-En Care Centre', 					distance: 5.0, location:'', icon:'/img/hospitals/image9.jpg', desc:'' },
+			{ name : 'General Hospital', 					    distance: 5.0, location:'', icon:'/img/hospitals/image9.jpg', desc:'private' },
+		],
+		parks : [
+			{ name : 'Dhoby Ghaut Green', 		distance: 5.0, location:'', icon:'/img/parks/park1.jpg', desc:'' },
+			{ name : 'Gardens by the Bay', 		distance: 5.0, location:'', icon:'/img/parks/park2.jpg', desc:'' },
+			{ name : 'Pearl\'s Hill City Park', distance: 5.0, location:'', icon:'/img/parks/park3.jpg', desc:'' },
+			{ name : 'Tiong Bahru Park', 		distance: 5.0, location:'', icon:'/img/parks/park4.jpg', desc:'' },
+			{ name : 'Clementi Woods Park ', 	distance: 5.0, location:'', icon:'/img/parks/park5.jpg', desc:'' },
+			{ name : 'Jurong Central Park ', 	distance: 5.0, location:'', icon:'/img/parks/park6.jpg', desc:'' },
+			{ name : 'Jurong Central Park ', 	distance: 5.0, location:'', icon:'/img/parks/park7.jpg', desc:'' },
+			{ name : 'Toa Payoh Town Park', 	distance: 5.0, location:'', icon:'/img/parks/park8.jpg', desc:'' },
+			{ name : 'Woodlands Town Garden', 	distance: 5.0, location:'', icon:'/img/parks/park9.jpg', desc:'' },
+			{ name : 'Pasir Ris Park', 			distance: 5.0, location:'', icon:'/img/parks/park10.jpg', desc:'' }
+		],
+		facilities : [
+			{ name : 'National Heart Centre', 				 distance: 5.0, location:'', icon:'/img/facilities/images-1.jpg', desc:'' },
+			{ name : 'National Neuroscience Institute', 	 distance: 5.0, location:'', icon:'/img/facilities/images-2.jpg', desc:'' },
+			{ name : 'Singapore National Eye Centre', 		 distance: 5.0, location:'', icon:'/img/facilities/images-3.jpg', desc:'' },
+			{ name : 'Raffles Hospital', 					 distance: 5.0, location:'', icon:'/img/facilities/images-4.jpg', desc:'' },
+			{ name : 'Ren Ci Hospital and Medicare Centre',  distance: 5.0, location:'', icon:'/img/facilities/images-5.jpg', desc:'' },
+			{ name : 'National University Hospital', 		 distance: 5.0, location:'', icon:'/img/facilities/images-6.jpg', desc:'' },
+			{ name : 'Tan Tock Seng Hospital', 				 distance: 5.0, location:'', icon:'/img/facilities/images-7.jpg', desc:'' },
+			{ name : 'KK Women\'s and Children\'s Hospital', distance: 5.0, location:'', icon:'/img/facilities/images-8.jpg', desc:'' },
+			{ name : 'Saint Jose\'s Community Hospital', 	 distance: 5.0, location:'', icon:'/img/facilities/images-9.jpg', desc:'' },
+			{ name : 'Saint Andrew\'s Community Hospital', 	 distance: 5.0, location:'', icon:'/img/facilities/images-10.jpg', desc:'' }
 		]
 	};
 
@@ -141,6 +141,23 @@ app.controller('CareCtrl', function($rootScope, $scope, $http, $interval, SETTIN
 
 	$scope.onviewload = function(cmd){
 		console.info('view loaded...', cmd);
+
+		jQuery.each(mocks[cmd], function(idx, value){
+			value.distance = Math.round10( ( Math.random() * 10 ) + value.distance, -1 );
+		});
+
+		mocks[cmd].sort(function(a, b){
+			if(a.distance > b.distance){
+				return 1;
+			}
+
+			if(a.distance > b.distance){
+				return -1;
+			}
+
+			return 0;
+		});
+
 		$scope.model = mocks[cmd];
 	};
 
