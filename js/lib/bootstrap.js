@@ -64,6 +64,9 @@ app.config(['$translateProvider', function ($translateProvider) {
         CONT_MY_SON    : 'My Son',
         CONT_SET_DEFAULT     : 'Set Default',
         CONT_CALL    : 'Call',
+        REVE_PLAY	:'Play',
+        REVE_RECORD	: 'Record',
+        REVE_SET_UNLOCKER: 'Set Unlocker',
 
 	});
 	$translateProvider.preferredLanguage('en');
