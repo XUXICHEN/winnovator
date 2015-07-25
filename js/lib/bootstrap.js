@@ -59,7 +59,11 @@ app.config(['$translateProvider', function ($translateProvider) {
 		CARE_FRIENDS_CALLVM : 'Vocal Msg',
         VOCA_SHARE     : 'SHARE',
         VOCA_REMIND    : 'REMIND',
-        VOCA_RECORD    : 'RECORD'
+        VOCA_RECORD    : 'RECORD',
+        CONT_CONTACTS_LIST     : 'Contacts List',
+        CONT_MY_SON    : 'My Son',
+        CONT_SET_DEFAULT     : 'Set Default',
+        CONT_CALL    : 'Call',
 
 	});
 	$translateProvider.preferredLanguage('en');
