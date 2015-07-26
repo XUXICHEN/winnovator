@@ -7,11 +7,6 @@ var initmap = function(){
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	});
 
-	var defaultBounds = new google.maps.LatLngBounds(
-	  new google.maps.LatLng(-33.8902, 151.1759),
-	  new google.maps.LatLng(-33.8474, 151.2631));
-	map.fitBounds(defaultBounds);
-
 	// Create the search box and link it to the UI element.
 	var input = /** @type {HTMLInputElement} */(
 	  document.getElementById('pac-input'));
@@ -20,49 +15,103 @@ var initmap = function(){
 	var searchBox = new google.maps.places.SearchBox(
 	/** @type {HTMLInputElement} */(input));
 
-	// [START region_getplaces]
-	// Listen for the event fired when the user selects an item from the
-	// pick list. Retrieve the matching places for that item.
-	google.maps.event.addListener(searchBox, 'places_changed', function() {
-	var places = searchBox.getPlaces();
+	navigator.geolocation.getCurrentPosition(function(position){
+		var defaultBounds = new google.maps.LatLngBounds(
+		  new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+		  new google.maps.LatLng(position.coords.latitude + 0.005, position.coords.longitude + 0.005));
+		
+		map.fitBounds(defaultBounds);
 
-	console.info(places);
+		// [START region_getplaces]
+		// Listen for the event fired when the user selects an item from the
+		// pick list. Retrieve the matching places for that item.
+		google.maps.event.addListener(searchBox, 'places_changed', function() {
+			var places = searchBox.getPlaces();
 
-	if (places.length == 0) {
-	  return;
-	}
-	for (var i = 0, marker; marker = markers[i]; i++) {
-	  marker.setMap(null);
-	}
+			console.info(places);
 
-	// For each place, get the icon, place name, and location.
-	markers = [];
-	var bounds = new google.maps.LatLngBounds();
-	for (var i = 0, place; place = places[i]; i++) {
-	  var image = {
-	    url: place.icon,
-	    size: new google.maps.Size(71, 71),
-	    origin: new google.maps.Point(0, 0),
-	    anchor: new google.maps.Point(17, 34),
-	    scaledSize: new google.maps.Size(25, 25)
-	  };
+			if (places.length == 0) {
+			  return;
+			}
+			for (var i = 0, marker; marker = markers[i]; i++) {
+			  marker.setMap(null);
+			}
 
-	  // Create a marker for each place.
-	  var marker = new google.maps.Marker({
-	    map: map,
-	    icon: image,
-	    title: place.name,
-	    position: place.geometry.location
-	  });
+			// For each place, get the icon, place name, and location.
+			markers = [];
+			var bounds = new google.maps.LatLngBounds();
+			for (var i = 0, place; place = places[i]; i++) {
+			  var image = {
+			    url: place.icon,
+			    size: new google.maps.Size(71, 71),
+			    origin: new google.maps.Point(0, 0),
+			    anchor: new google.maps.Point(17, 34),
+			    scaledSize: new google.maps.Size(25, 25)
+			  };
 
-	  markers.push(marker);
+			  // Create a marker for each place.
+			  var marker = new google.maps.Marker({
+			    map: map,
+			    icon: image,
+			    title: place.name,
+			    position: place.geometry.location
+			  });
 
-	  bounds.extend(place.geometry.location);
-	}
+			  markers.push(marker);
 
-	map.fitBounds(bounds);
-	});
-	// [END region_getplaces]
+			  bounds.extend(place.geometry.location);
+			}
+
+			map.fitBounds(bounds);
+		});
+
+		var marker = new google.maps.Marker({
+		      position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+		      map: map
+		});
+
+		var autocomplete = new google.maps.places.AutocompleteService();
+
+		/**
+		 *
+		 * new google.maps.Marker({
+					  position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+					  map: map,
+					  title : pred.description
+					  //icon: iconBase + 'schools_maps.png'
+					});
+		 */
+
+		autocomplete.getPlacePredictions({input: jQuery('#pac-input').val()}, function(predictions, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                console.log(predictions);
+
+                var service = new google.maps.places.PlacesService(map);
+                var infowindow = new google.maps.InfoWindow();
+
+                jQuery.each(predictions, function(idx, pred){
+                	service.getDetails({ placeId : pred.place_id}, function(place, status) {
+                		console.info(place, status);
+				    if (status == google.maps.places.PlacesServiceStatus.OK) {
+				      var marker = new google.maps.Marker({
+				        map: map,
+				        position: place.geometry.location,
+				        title : pred.descriptiom
+				      });
+				      google.maps.event.addListener(marker, 'click', function() {
+				        infowindow.setContent(place.name);
+				        infowindow.open(map, this);
+				      });
+				    }
+				  });
+                });
+            }
+        });
+
+		//google.maps.event.trigger(searchBox, 'places_changed');
+
+		// [END region_getplaces]
+	});//eo getCurrentPosition()
 
 	// Bias the SearchBox results towards places that are within the bounds of the
 	// current map's viewport.
@@ -143,8 +192,13 @@ app.controller('CareCtrl', function($rootScope, $scope, $http, $interval, SETTIN
 	$scope.onviewload = function(cmd){
 		console.info('view loaded...', cmd);
 
-		if(typeof mocks[cmd] === 'undefined'){
+		if(typeof mocks[cmd] === 'undefined' && $scope.view_cmd !== 'map'){
 			return;
+		}
+
+		if($scope.view_cmd === 'map'){
+			console.info('init maps...');
+			initmap();
 		}
 
 		jQuery.each(mocks[cmd], function(idx, value){
@@ -164,6 +218,14 @@ app.controller('CareCtrl', function($rootScope, $scope, $http, $interval, SETTIN
 		});
 
 		$scope.model = mocks[cmd];
+	};
+
+	$scope.show_map = function(msp){
+		$scope.show_main = 'hidden';		
+		$scope.show_sub = '';
+		$scope.view_cmd = 'map';
+		$scope.show_template = '/js/modules/care/map.html';		
+		$scope.model = 'parks';
 	};
 
 });
