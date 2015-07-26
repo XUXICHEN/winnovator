@@ -1,10 +1,22 @@
 <div class="ui celled grid allheight">
 	<div class="row halfheight">
-		<div class="eight wide column ui button yellow" ng-click="goto('care')">{{ 'MENU_LIFE_CARE' | translate }}</div>
-		<div class="eight wide column ui button green"  ng-click="goto('voca')">{{ 'MENU_VOCAL_MSG' | translate }}</div>
+		<div class="eight wide column ui button yellow" ng-click="goto('care')">
+			<i class="fa fa-bed icon-big"></i>
+			{{ 'MENU_LIFE_CARE' | translate }}
+		</div>
+		<div class="eight wide column ui button green"  ng-click="goto('voca')">
+			<i class="fa fa-volume-up icon-big"></i>
+			{{ 'MENU_VOCAL_MSG' | translate }}
+		</div>
 	</div>
 	<div class="row halfheight">
-		<div class="eight wide column ui button blue"   ng-click="goto('cont')">{{ 'MENU_CONTACTS' | translate }}</div>
-		<div class="eight wide column ui button teal"   ng-click="goto('reve')">{{ 'MENU_REVEAL'   | translate }}</div>
+		<div class="eight wide column ui button blue"   ng-click="goto('cont')">
+			<i class="fa fa-users icon-big"></i>
+			{{ 'MENU_CONTACTS' | translate }}
+		</div>
+		<div class="eight wide column ui button teal"   ng-click="goto('reve')">
+			<i class="fa fa-sellsy icon-big"></i>
+			{{ 'MENU_REVEAL'   | translate }}
+		</div>
 	</div>
 </div>
