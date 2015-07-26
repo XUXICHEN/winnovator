@@ -82,3 +82,14 @@ html, body { height:100%;}
 	margin-bottom: 10px;
 }
 
+.contact-records {
+	padding-top: 42px !important;
+}
+
+.voice-records {
+	padding-top: 30px !important;
+}
+
+.voice-records .ui.cards>.card {
+	margin: 0px !important;
+}

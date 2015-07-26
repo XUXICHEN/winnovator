@@ -1,4 +1,4 @@
-app.controller('ReveCtrl', function($rootScope, $scope, $http, $interval, SETTINGS, INFO){
+app.controller('ReveCtrl', function($rootScope, $scope, $http, $location, $interval, SETTINGS, INFO){
 	console.info('ReveCtrl started @ ' + $rootScope.startTimestamp);
 
 	var mocks = {
@@ -17,6 +17,8 @@ app.controller('ReveCtrl', function($rootScope, $scope, $http, $interval, SETTIN
 	$scope.view_cmd = '';
 	$scope.main = false;
 
+	var hash = $location.hash();
+
 	$scope.show = function(cmd){
 		console.info(cmd);
 		$scope.show_main = 'hidden';		
@@ -25,6 +27,10 @@ app.controller('ReveCtrl', function($rootScope, $scope, $http, $interval, SETTIN
 		$scope.show_template = '/js/modules/reve/' + cmd + '.html';		
 		$scope.model = [];
 	};
+
+	if(hash){
+		$scope.show(hash);		
+	}
 
 	$scope.onviewload = function(cmd){
 		console.info('view loaded...', cmd);
