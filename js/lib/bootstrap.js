@@ -78,7 +78,7 @@ app.config(['$translateProvider', function ($translateProvider) {
 		REVE_CLOCK			 : 'Timer',
 		REVE_CLOCK_TIME		 : 'Timer Time',
 		REVE_VOCLOG          : 'Vocal Memo',
-		REVE_REMOVE	         : 'Rmove',
+		REVE_REMOVE	         : 'Remove',
 		REVE_PLAY			 : 'Play',
         REVE_RECORD			 : 'Record',
         REVE_SET_UNLOCKER    : 'Set Unlocker',
