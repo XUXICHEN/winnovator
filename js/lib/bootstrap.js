@@ -45,12 +45,12 @@ app.run(function($rootScope) {
 	   	'VERSION' : '1.0.0'
    })
    .constant('SETTINGS', {
-	   	title : 'Sprot'
+	   	title : 'Sprout'
    });
 
 app.config(['$translateProvider', function ($translateProvider) {
 	$translateProvider.translations('en', {
-		TITLE                : 'Sprot',
+		TITLE                : 'Sprout',
 		MENU_LIFE_CARE       : 'Life Care',
 		MENU_VOCAL_MSG       : 'Vocal Message',
 		MENU_CONTACTS        : 'Contacts',
@@ -63,6 +63,7 @@ app.config(['$translateProvider', function ($translateProvider) {
 		CARE_FRIENDS_GOTO    : 'Goto',
 		CARE_FRIENDS_CALL    : 'Call',
 		CARE_FRIENDS_CALLVM  : 'Vocal Msg',
+		CARE_FRIENDS_INVITE  : 'Invite',
         VOCA_SHARE           : 'SHARE',
         VOCA_REMIND          : 'REMIND',
         VOCA_RECORD          : 'RECORD',
