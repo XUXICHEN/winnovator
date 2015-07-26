@@ -15,6 +15,7 @@ app.controller('ReveCtrl', function($rootScope, $scope, $http, $interval, SETTIN
 	$scope.show_sub = 'hidden';
 	$scope.show_main = '';
 	$scope.view_cmd = '';
+	$scope.main = false;
 
 	$scope.show = function(cmd){
 		console.info(cmd);

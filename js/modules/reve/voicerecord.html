@@ -21,7 +21,10 @@
 			      {{ 'REVE_CLOCK_TIME' | translate }}
 			  </div>
 			  <div class="extra content">
-			  	<div class="ui red button" ng-click="remove_item(view_cmd, key)"> <i class="fa fa-remove"></i> {{ 'REVE_REMOVE' | translate }}</div>
+			  	<div class="ui two buttons">
+				  	<div class="ui green button" ng-click="play_item(view_cmd, key)"> <i class="fa fa-play"></i> {{ 'REVE_PLAY' | translate }}</div>
+				  	<div class="ui red button" ng-click="remove_item(view_cmd, key)"> <i class="fa fa-remove"></i> {{ 'REVE_REMOVE' | translate }}</div>
+			  	</div>
 			  </div>
 		</div>
 	</div>

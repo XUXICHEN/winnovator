@@ -37,6 +37,13 @@
 
   <body>
     
+    <div class="ui top fixed menu" ng-if="!main">
+        <div class="ui two buttons">
+            <div class="ui grey button" ng-click="goto('/')"> <i class="fa fa-home"></i> {{ 'REVE_HOME' | translate }}</div>
+            <div class="ui black button" ng-click="back()"> <i class="fa fa-arrow-left"></i> {{ 'REVE_BACK' | translate }}</div>
+        </div>
+    </div>
+
     <div class="container allheight" ng-view></div>
 
     <!-- SET BASE URL -->

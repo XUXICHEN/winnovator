@@ -76,9 +76,11 @@ app.config(['$translateProvider', function ($translateProvider) {
 		REVE_CLOCK_TIME		 : 'Timer Time',
 		REVE_VOCLOG          : 'Vocal Memo',
 		REVE_REMOVE	         : 'Rmove',
-		REVE_PLAY			 :'Play',
+		REVE_PLAY			 : 'Play',
         REVE_RECORD			 : 'Record',
-        REVE_SET_UNLOCKER    : 'Set Unlocker'
+        REVE_SET_UNLOCKER    : 'Set Unlocker',
+        REVE_HOME			 : 'Home',
+        REVE_BACK	         : 'Back'
 	});
 	$translateProvider.preferredLanguage('en');
 }]);
@@ -93,6 +95,9 @@ app.controller('MainCtrl',
 		$scope.goto = function(path){
 			$location.url(path)
 		};
+		$scope.back = function(){
+			history.back();	
+		}
 
 	}//eo MainCtrl body
 );//eo MainCtrl

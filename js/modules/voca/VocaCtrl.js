@@ -4,6 +4,8 @@ app.controller('VocaCtrl', function($rootScope, $scope,$http, $interval, SETTING
     jQuery('#datetimepicker1').datetimepicker();
 
     $scope.custom = true;
+    $scope.main = false;
+    
     $scope.toggleCustom = function() {
         $scope.custom = $scope.custom === false ? true: false;
     };
