@@ -65,7 +65,7 @@ app.config(['$translateProvider', function ($translateProvider) {
         VOCA_RECORD          : 'RECORD',
         VOCA_SENT            : 'VOICE MEMO SENT',
         CONT_CONTACTS_LIST   : 'Contacts List',
-        CONT_MY_SON          : 'My Son',
+        CONT_MY_SON          : 'Son',
         CONT_SET_DEFAULT     : 'Set Default',
         CONT_CALL            : 'Call',
         REVE_RECORDING	     : 'Record Voice',
