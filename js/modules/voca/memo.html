@@ -1,0 +1,33 @@
+<div class="ui inverted blue menu">
+    <div class="ui container">
+        <div href="#" class="header item ">
+            <!--<img class="logo centered" src="assets/images/logo.png">-->
+            <span>Vocal Memo</span>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="ui centered" style="margin-top:50px">
+
+    <a ng-click="toggleCustom()" ng-show="custom"><img class="ui centered medium image"  ng-src="/img/record.png"  />
+    </a>
+
+    <a ng-click="toggleCustom()" ng-hide="custom"><img class="ui centered medium image"  ng-src="/img/stop.png"  />
+    </a>
+
+
+    <div class="ui green  fluid ">
+        <div class="ui content header centered " style="margin-top:10px">
+           <h1> {{ 'VOCA_RECORD' | translate }} </h1>
+        </div>
+    </div>
+</div>
+
+<div class="ui fluid bottom allheight attached buttons ">
+    <button class="ui  fluid  allheight blue button sixteen wide column"ng-click="goto('options')" style="margin-top:10px">Done</button>
+
+</div>
+
