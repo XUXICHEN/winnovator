@@ -137,6 +137,8 @@ app.controller('CareCtrl', function($rootScope, $scope, $http, $interval, SETTIN
 			{ name : 'Ashley Ng',      distance: 5.0, location:'28 Maxwell Road', icon:'/img/avatar/Ash.jpg', desc:'' }
 		],
         facilities : [
+            { name : 'Jamiyah Senior Care Centre',                   distance: 5.0, location:'', icon:'/img/facilities/image10.jpg', desc:'private' },
+            { name : 'Yong-En Care Centre',                distance: 5.0, location:'', icon:'/img/facilities/image9.jpg', desc:'' },
             { name : 'AgeWell Artsz',                    distance: 5.0, location:'', icon:'/img/facilities/image1.jpg', desc:'' },
             { name : 'Assist Care',                      distance: 5.0, location:'', icon:'/img/facilities/image2.jpg', desc:'' },
             { name : 'Handicaps Welfare Association (Whampoa)', distance: 5.0, location:'', icon:'/img/facilities/image3.jpg', desc:'' },
@@ -144,9 +146,9 @@ app.controller('CareCtrl', function($rootScope, $scope, $http, $interval, SETTIN
             { name : 'MW Medical Pte Ltd',                    distance: 5.0, location:'', icon:'/img/facilities/image5.jpg', desc:'' },
             { name : 'OmniMed Healthcare Holdings',          distance: 5.0, location:'', icon:'/img/facilities/image6.jpg', desc:'' },
             { name : 'Preciouz Kare Pte Ltd',              distance: 5.0, location:'', icon:'/img/facilities/image7.jpg', desc:'private' },
-            { name : 'St Andrew\'s Community Hospital',       distance: 5.0, location:'', icon:'/img/facilities/image8.jpg', desc:'' },
-            { name : 'Yong-En Care Centre',                distance: 5.0, location:'', icon:'/img/facilities/image9.jpg', desc:'' },
-            { name : 'General Hospital',                   distance: 5.0, location:'', icon:'/img/facilities/image9.jpg', desc:'private' },
+            { name : 'Econ Healthcare Group',       distance: 5.0, location:'', icon:'/img/facilities/image8.jpg', desc:'' },
+
+
         ],
 		parks : [
 			{ name : 'Dhoby Ghaut Green', 		distance: 5.0, location:'', icon:'/img/parks/park1.jpg', desc:'' },
