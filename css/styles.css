@@ -1,5 +1,9 @@
 html, body { height:100%;}
 
+.main-container {
+	padding-top: 35px;
+}
+
 .hidden {
 	display: none !important;
 }
@@ -80,14 +84,6 @@ html, body { height:100%;}
 	font-size: 10em;
 	display: block;
 	margin-bottom: 10px;
-}
-
-.contact-records {
-	padding-top: 42px !important;
-}
-
-.voice-records {
-	padding-top: 30px !important;
 }
 
 .voice-records .ui.cards>.card {
