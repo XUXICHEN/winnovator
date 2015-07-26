@@ -3,10 +3,11 @@
 <div class="ui centered" style="margin-top:50px">
 
     <a ng-click="toggleCustom()" ng-show="custom"><img class="ui centered medium image"  ng-src="/img/record.png"  />
+
     </a>
 
     <a ng-click="toggleCustom()" ng-hide="custom"><img class="ui centered medium image"  ng-src="/img/stop.png"  />
-    </a>
+
 
 
     <div class="ui green  fluid ">
@@ -14,9 +15,12 @@
            <h1> {{ 'VOCA_RECORD' | translate }} </h1>
         </div>
     </div>
+    <a ng-click="toggleCustom()" ng-hide="custom" style="margin-top:10px"><img class="ui centered mini image"  ng-src="/img/loading.gif"  />
+    </a>
 </div>
 
-<div class="row halfheight">
+<br/>
+<div class="row halfheight" style="margin-top:10px;>
     <div class="ui  fluid  blue button fullwidth column"ng-click="goto('options')" style="margin-top:10px; font-size: 100px;">DONE</div>
 
 </div>
