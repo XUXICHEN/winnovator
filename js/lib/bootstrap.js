@@ -16,6 +16,9 @@ var app = angular.module('Sprot', ['ngSanitize', 'ngRoute', 'pascalprecht.transl
         }).when('/sent', {
             templateUrl : '/js/modules/voca/sent.html',
             controller : 'VocaCtrl'
+        }).when('/record', {
+            templateUrl : '/js/modules/voca/record.html',
+            controller : 'VocaCtrl'
         }).when('/voca', {
             templateUrl : '/js/modules/voca/index.html',
             controller : 'VocaCtrl'
@@ -65,7 +68,7 @@ app.config(['$translateProvider', function ($translateProvider) {
         VOCA_RECORD          : 'RECORD',
         VOCA_SENT            : 'VOICE MEMO SENT',
         CONT_CONTACTS_LIST   : 'Contacts List',
-        CONT_MY_SON          : 'My Son',
+        CONT_MY_SON          : 'Son',
         CONT_SET_DEFAULT     : 'Set Default',
         CONT_CALL            : 'Call',
         REVE_RECORDING	     : 'Record Voice',
