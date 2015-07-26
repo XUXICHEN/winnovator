@@ -16,6 +16,9 @@ var app = angular.module('Sprot', ['ngSanitize', 'ngRoute', 'pascalprecht.transl
         }).when('/sent', {
             templateUrl : '/js/modules/voca/sent.html',
             controller : 'VocaCtrl'
+        }).when('/record', {
+            templateUrl : '/js/modules/voca/record.html',
+            controller : 'VocaCtrl'
         }).when('/voca', {
             templateUrl : '/js/modules/voca/index.html',
             controller : 'VocaCtrl'
