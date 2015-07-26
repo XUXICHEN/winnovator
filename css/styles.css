@@ -76,3 +76,9 @@ html, body { height:100%;}
 	padding-bottom:15px !important;
 }
 
+.icon-big{
+	font-size: 10em;
+	display: block;
+	margin-bottom: 10px;
+}
+

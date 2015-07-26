@@ -1,11 +1,23 @@
 <div class="main-ctn ui celled grid allheight ng-class: show_main;">
 	<div class="row halfheight">
-		<div class="eight wide column ui button yellow" ng-click="show('friends')"    >{{ 'CARE_FRIENDS_AROUND' | translate }}</div>
-		<div class="eight wide column ui button green"  ng-click="show('facilities')" >{{ 'CARE_FACILITIES'     | translate }}</div>
+		<div class="eight wide column ui button yellow" ng-click="show('friends')"    >
+			<i class="fa fa-group icon-big"></i>
+			{{ 'CARE_FRIENDS_AROUND' | translate }}
+		</div>
+		<div class="eight wide column ui button green"  ng-click="show('facilities')" >
+			<i class="fa fa-arrow-circle-up icon-big"></i>
+			{{ 'CARE_FACILITIES'     | translate }}
+		</div>
 	</div>
 	<div class="row halfheight">
-		<div class="eight wide column ui button blue" ng-click="show('parks')"    >{{ 'CARE_PARKS'     | translate }}</div>
-		<div class="eight wide column ui button teal" ng-click="show('hospitals')">{{ 'CARE_HOSPITALS' | translate }}</div>
+		<div class="eight wide column ui button blue" ng-click="show('parks')"    >
+			<i class="fa fa-street-view icon-big"></i>
+			{{ 'CARE_PARKS'     | translate }}
+		</div>
+		<div class="eight wide column ui button teal" ng-click="show('hospitals')">
+			<i class="fa fa-hospital-o icon-big"></i>
+			{{ 'CARE_HOSPITALS' | translate }}
+		</div>
 	</div>
 </div>
 
